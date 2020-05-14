@@ -16,7 +16,7 @@
 **Fork** this repository and clone your fork (make sure you clone it into your `development` directory):
 
 ```bash
-$ git clone https://github.com/<your_username>/FoundationsFunctions.git
+$ git clone https://github.com/<your_username>/JSFoundations-Functions.git
 ```
 
 #### Running The Tests
