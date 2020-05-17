@@ -24,7 +24,7 @@ $ git clone https://github.com/<your_username>/JSFoundations-Functions.git
 Install all the requirements:
 
 1. Navigate to the project root (you'll find a file called `package.json` there).
-2. Install the requirments with the following command:
+2. Install the required packages with the following command:
 
    ```bash
    $ yarn install
