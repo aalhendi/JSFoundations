@@ -1,3 +1,14 @@
+# Setup
+
+## Install Visual Studio Code
+
+[Click here to download](https://code.visualstudio.com/download)
+
+## Install [node](https://nodejs.org/en/download/)
+
+- For Mac users, install node using the [macOS installer](https://nodejs.org/dist/v12.16.3/node-v12.16.3.pkg).
+- For Windows users, install by downloading the [Windows installer](https://nodejs.org/dist/v12.16.3/node-v12.16.3-x64.msi).
+
 # Task
 
 In this task, you'll write a script that has variables and uses `console.log` to print a little story.
