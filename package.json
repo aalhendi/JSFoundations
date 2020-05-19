@@ -1,0 +1,17 @@
+{
+  "name": "js-episode3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-jest": "^25.1.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^25.1.0"
+  },
+  "scripts": {
+    "test": "CI=true jest"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.8.4"
+  }
+}
