@@ -1,25 +1,13 @@
-# JavaScript Episode 3
+# Arrow Functions & Iteration Methods Task
 
 ## Instructions
-
-#### Tools
-
-- Install `node`:
-  ```bash
-  $ brew install node
-  ```
-- Install `yarn`:
-
-  ```bash
-  $ brew install yarn --without-node
-  ```
 
 #### The Files
 
 **Fork** this repository and clone your fork (make sure you clone it into your `development` directory):
 
 ```bash
-$ git clone https://github.com/<your_username>/JSEpisode3.git
+$ git clone https://github.com/<your_username>/JSFoundations-Arrows-Iterators.git
 ```
 
 #### Running The Tests
