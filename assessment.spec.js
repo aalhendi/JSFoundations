@@ -118,7 +118,7 @@ describe("reverseString(string)", () => {
 });
 
 describe("generateIntegersArray(firstNumber, lastNumber)", () => {
-  test("returns the reverse of a string.", () => {
+  test("returns the string of numbers without zeros on the end or beginning.", () => {
     const firstNumber = 4;
     const lastNumber = 13;
     const res = [4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
