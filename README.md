@@ -4,6 +4,15 @@
 
 [Click here to download](https://code.visualstudio.com/download)
 
+## Install Prettier in Visual Studio Code
+
+1. Open VS Code
+2. Click the settings icon in the bottom left corner, and open the `Command Palette...`.
+3. Search for "Prettier", then click "Install".
+4. Once it's done installing, restart VS Code.
+5. Click the settings icon in the bottom left corner again, and open the `Settings`.
+6. Search in settings for `Format On Save`, and **make sure the box is checked**.
+
 ## Install [node](https://nodejs.org/en/download/)
 
 - For Mac users, install node using the [macOS installer](https://nodejs.org/dist/v12.16.3/node-v12.16.3.pkg).
