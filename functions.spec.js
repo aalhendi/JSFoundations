@@ -15,14 +15,7 @@ import {
 } from "./functions";
 
 describe("greet(name)", () => {
-  test("logs 'Hello' if there is no name", () => {
-    const spy = jest.spyOn(console, "log");
-    greet();
-    expect(spy).toHaveBeenCalledWith("Hello");
-    spy.mockRestore();
-  });
-
-  test("logs 'Hello <name>' when there is a name", () => {
+  test("logs 'Hello <name>'", () => {
     const spy = jest.spyOn(console, "log");
     const names = ["Asis", "Lailz", "Mishmish"];
 

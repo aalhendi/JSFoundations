@@ -1,8 +1,10 @@
 /**
  * greet(name):
  * - optionally receives a name
- * - logs "Hello" if there is no name
- * - logs "Hello <name>" if there is a name
+ * - logs "Hello <name>"
+ *
+ * e.g.
+ * greet("Michael") logs "Hello Michael"
  */
 function greet(name) {
   // Your code here
