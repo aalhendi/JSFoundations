@@ -7,192 +7,123 @@
  ***************************/
 
 import {
-  getBookById,
-  getAuthorByName,
-  bookCountsByAuthor,
-  booksByColor,
-  titlesByAuthorName,
-  mostProlificAuthor,
-  relatedBooks,
-  friendliestAuthor
+  getChannelName,
+  numberOfVideos,
+  channelHasVideo,
+  getChannelByName,
+  getChannelByVideoTitle,
+  searchChannels,
+  totalVideosDuration,
+  channelWithMostContent,
+  longestChannelName,
 } from "./functions";
 
 // Data
-import authors from "./authors.json";
-import books from "./books.json";
+import channels from "./channels.json";
 
-describe("getBookById(bookId, books)", () => {
-  test("returns the correct book", () => {
-    const expected = books[Math.floor(Math.random() * books.length)];
-    const result = getBookById(expected.id, books);
-    expect(result).toBe(expected);
+describe("getChannelName(channel)", () => {
+  test("returns the corrent channel name.", () => {
+    const channel = channels[0];
+    const channelName = channel.name;
+    const result = getChannelName(channel);
+    expect(result).toBe(channelName);
+  });
+});
+
+describe("numberOfVideos(channel)", () => {
+  test("returns the corrent number of videos the given channel has.", () => {
+    const channel = channels[0];
+    const correctNumber = channel.videos.length;
+    const result = numberOfVideos(channel);
+    expect(result).toBe(correctNumber);
+  });
+});
+
+describe("channelHasVideo(videoTitle, channel)", () => {
+  test("returns true if channel has a video with the given title", () => {
+    const channel = channels[0];
+    const videoTitle = channel.videos[0].title;
+    const result = channelHasVideo(videoTitle, channel);
+    expect(result).toBe(true);
   });
 
-  test("returns undefined if the book is not found", () => {
-    const result = getBookById(10000, books);
+  test("returns false if channel doesn't have a video with the given title", () => {
+    const channel = channels[0];
+    const videoTitle = channel.videos[0].title;
+    const result = channelHasVideo(videoTitle, channel);
+    expect(result).toBe(true);
+  });
+});
+
+describe("getChannelByName(channelName, channels)", () => {
+  test("returns the correct channel object.", () => {
+    const channel = channels[0];
+    const channelName = channel.name;
+    const result = getChannelByName(channelName, channels);
+    expect(result).toBe(channel);
+  });
+
+  test("returns undefined if no channel has that name.", () => {
+    const channelName = "sflkdsfkdsnfjksdnfkrs";
+    const result = getChannelByName(channelName, channels);
     expect(result).toBeUndefined();
   });
 });
 
-describe("getAuthorByName(authorName, authors)", () => {
-  test("returns the correct author", () => {
-    const expected = authors[Math.floor(Math.random() * authors.length)];
-    const result = getAuthorByName(expected.name, authors);
-    expect(result).toBe(expected);
+describe("getChannelByVideoTitle(videoTitle, channels)", () => {
+  test("returns the correct channel object.", () => {
+    const channel = channels[0];
+    const videoTitle = channel.videos[2].title;
+    const result = getChannelByVideoTitle(videoTitle, channels);
+    expect(result).toBe(channel);
   });
 
-  test("is case insensitive", () => {
-    const expected = authors[Math.floor(Math.random() * authors.length)];
-    let result = getAuthorByName(expected.name.toLowerCase(), authors);
-    expect(result).toBe(expected);
-    result = getAuthorByName(expected.name.toUpperCase(), authors);
-    expect(result).toBe(expected);
-  });
-
-  test("returns undefined if the author is not found", () => {
-    const result = getAuthorByName("Dr Patatis", authors);
+  test("returns undefined if no channel has that video.", () => {
+    const videoTitle = "sflkdsfkdsnfjksdnfkrs";
+    const result = getChannelByVideoTitle(videoTitle, channels);
     expect(result).toBeUndefined();
   });
 });
 
-describe("bookCountsByAuthor(authors)", () => {
-  test("returns the correct number of objects", () => {
-    const expected = authors.length;
-    const result = bookCountsByAuthor(authors).length;
-    expect(result).toBe(expected);
+describe("searchChannels(query, channels)", () => {
+  test("returns the correct array of channel objects.", () => {
+    const correctChannels = [channels[1], channels[3], channels[4]];
+    const query = "and";
+    const result = searchChannels(query, channels);
+    expect(result).toEqual(correctChannels);
   });
 
-  test("returns the correct format", () => {
-    const result = bookCountsByAuthor(authors).every(author => {
-      const keys = Object.keys(author);
-      return keys.includes("author") && keys.includes("bookCount");
-    });
-    expect(result).toBe(true);
-  });
-
-  test("returns the correct data", () => {
-    const expected = [
-      { author: "Margaret Atwood", bookCount: 4 },
-      { author: "Lauren Beukes", bookCount: 2 }
-    ];
-    const result = bookCountsByAuthor(authors.slice(0, 2));
-    expect(result).toEqual(expected);
-  });
-});
-
-describe("booksByColor(books)", () => {
-  test("returns the correct number of colors", () => {
-    const expected = 2;
-    const onlyGreenAndBlueBooks = books.filter(
-      book => book.color === "green" || book.color === "blue"
-    );
-    const result = Object.keys(booksByColor(onlyGreenAndBlueBooks)).length;
-    expect(result).toBe(expected);
-  });
-
-  test("returns the correct format", () => {
-    const result = Object.values(booksByColor(books)).every(bookList =>
-      Array.isArray(bookList)
-    );
-    expect(result).toBe(true);
-  });
-
-  test("returns the correct data", () => {
-    const expected = {
-      white: [
-        "12 Rules for Life: An Antidote to Chaos",
-        "A Dance With Dragons"
-      ],
-      yellow: ["A Clash of Kings"],
-      red: ["A Feast for Crows"]
-    };
-    const result = booksByColor(books.slice(0, 4));
-    expect(result).toEqual(expected);
-  });
-});
-
-describe("titlesByAuthorName(authorName, authors, books)", () => {
-  test("returns the correct list of books", () => {
-    let expected = ["The Shining Girls", "Zoo City"].sort();
-    let result = titlesByAuthorName("Lauren Beukes", authors, books).sort();
-    expect(result).toEqual(expected);
-    expected = ["Jane Eyre"];
-    result = titlesByAuthorName("Charlotte Brontë", authors, books);
-    expect(result).toEqual(expected);
-  });
-
-  test("is case-insensitive", () => {
-    let expected = ["The Shining Girls", "Zoo City"].sort();
-    let result = titlesByAuthorName("LaUreN BEukeS", authors, books).sort();
-    expect(result).toEqual(expected);
-    expected = ["Jane Eyre"];
-    result = titlesByAuthorName("CHaRlOttE BRontë", authors, books);
-    expect(result).toEqual(expected);
-  });
-
-  test("returns an empty array if the author is not found", () => {
-    const result = titlesByAuthorName("Dr Patatis", authors, books);
+  test("returns an empty array [] if no channel is found.", () => {
+    const query = "lerkgjerlgnerljgne";
+    const result = searchChannels(query, channels);
     expect(result).toEqual([]);
   });
 });
 
-describe("mostProlificAuthor(authors)", () => {
-  test("returns the correct author name", () => {
-    const expected = "Agatha Christie";
-    const result = mostProlificAuthor(authors.slice(0, 5));
-    expect(result).toBe(expected);
+describe("totalVideosDuration(channel)", () => {
+  test("returns the correct array of channel objects.", () => {
+    const channel = channels[0];
+    const totalDuration = channel.videos.reduce(
+      (totalDuration, video) => totalDuration + video.duration,
+      0
+    );
+    const result = totalVideosDuration(channel);
+    expect(result).toBe(totalDuration);
   });
 });
 
-describe("relatedBooks(bookId, authors, books)", () => {
-  test("returns the correct books", () => {
-    const expected = ["The Shining Girls", "Zoo City"].sort();
-    const result = relatedBooks(37, authors, books).sort();
-    expect(result).toEqual(expected);
-  });
-
-  test("can handle co-authored books - returns the titles of books by BOTH authors", () => {
-    const expected = [
-      "Good Omens",
-      "Good Omens",
-      "Neverwhere",
-      "Coraline",
-      "The Color of Magic",
-      "The Hogfather",
-      "Wee Free Men",
-      "The Long Earth",
-      "The Long War",
-      "The Long Mars"
-    ].sort();
-    const result = relatedBooks(46, authors, books).sort();
-    expect(result).toEqual(expected);
-  });
-
-  /**
-   * Remove the x to unskip and run the bonus test.
-   * Add an x to the previous test to skip it
-   */
-  xtest("BONUS - removes duplicate books", () => {
-    const expected = [
-      "Good Omens",
-      "Neverwhere",
-      "Coraline",
-      "The Color of Magic",
-      "The Hogfather",
-      "Wee Free Men",
-      "The Long Earth",
-      "The Long War",
-      "The Long Mars"
-    ].sort();
-    const result = relatedBooks(46, authors, books).sort();
-    expect(result).toEqual(expected);
+describe("channelWithMostContent(channels)", () => {
+  test("returns the correct channel object.", () => {
+    const correctChannel = channels[0];
+    const result = channelWithMostContent(channels);
+    expect(result).toEqual(correctChannel);
   });
 });
 
-describe("friendliestAuthor(authors)", () => {
-  test("returns the correct author", () => {
-    const expected = "Terry Pratchett";
-    const result = friendliestAuthor(authors);
-    expect(result).toEqual(expected);
+describe("longestChannelName(channels)", () => {
+  test("returns the correct channel object.", () => {
+    const correctChannel = channels[3];
+    const result = longestChannelName(channels);
+    expect(result).toEqual(correctChannel);
   });
 });
