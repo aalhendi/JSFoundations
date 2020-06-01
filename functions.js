@@ -1,6 +1,6 @@
 /**
  * greet(name):
- * - optionally receives a name
+ * - receives a name
  * - logs "Hello <name>"
  *
  * e.g.
