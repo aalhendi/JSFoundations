@@ -9,6 +9,7 @@
     "jest": "^25.1.0"
   },
   "scripts": {
-    "test": "CI=true jest"
+    "test": "jest",
+    "test-ci": "CI=true jest"
   }
 }
