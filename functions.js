@@ -30,7 +30,7 @@ function numberOfVideos(channel) {
  * - returns true if the channel object has a video that matches the given video title
  * - returns false otherwise
  *
- * Bonus: use iteration method `.some()`
+ * BONUS: use iteration method `.some()`
  ****************************************************************/
 function channelHasVideo(videoTitle, channel) {
   // Your code here
@@ -42,7 +42,7 @@ function channelHasVideo(videoTitle, channel) {
  * - recieves an array of channel objects
  * - returns the channel object with the same name as the channelName provided
  *
- * Bonus: use iteration method `.find()`
+ * BONUS: use iteration method `.find()`
  ****************************************************************/
 function getChannelByName(channelName, channels) {
   // Your code here
@@ -54,7 +54,7 @@ function getChannelByName(channelName, channels) {
  * - recieves an array of channel objects
  * - returns the channel object that contains a video with the video title provided
  *
- * Bonus: use iteration methods `.find()` and `.some()`
+ * BONUS: use iteration methods `.find()` and `.some()`
  ****************************************************************/
 function getChannelByVideoTitle(videoTitle, channels) {
   // Your code here
@@ -77,7 +77,7 @@ function searchChannels(query, channels) {
  * - receives a channel object
  * - returns the total duration of all the videos in this channel
  *
- * Bonus: use iteration method `.reduce()`
+ * BONUS: use iteration method `.reduce()`
  ****************************************************************/
 function totalVideosDuration(channel) {
   // Your code here
@@ -89,7 +89,7 @@ function totalVideosDuration(channel) {
  * - returns the channel with the highest total video duration
  *
  * Hint: use the `totalVideosDuration()` function
- * Bonus: use iteration method `.sort()`
+ * BONUS: use iteration method `.sort()`
  ****************************************************************/
 function channelWithMostContent(channels) {
   // Your code here
@@ -100,7 +100,7 @@ function channelWithMostContent(channels) {
  * - receives an array of channel objects
  * - returns the channel with the longest name
  *
- * Bonus: use iteration method `.sort()`
+ * BONUS: use iteration method `.sort()`
  ****************************************************************/
 function longestChannelName(channels) {
   // Your code here
