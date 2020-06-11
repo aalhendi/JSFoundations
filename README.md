@@ -19,7 +19,7 @@ To submit your work, simply push your code to GitHub.
 
 After finishing the task and verifying your work, follow these steps to push your code to GitHub:
 
-1. Navigate to project root (where `story.js` is).
+1. Navigate to project root (where `calculator.js` is).
 2. Run the command `git add .`
 3. Run `git commit -m "your message here"`.
 4. Push to GitHub: `git push`.
