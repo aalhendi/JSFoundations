@@ -16,6 +16,14 @@
 $ git clone https://github.com/<your_username>/JSFoundations-Functions.git
 ```
 
+#### Running Your Code
+
+To run the code you're writing without running the automated tests, call the function you'd like to test manually in `funcions.js` and run the following command:
+
+```bash
+$ node functions.js
+```
+
 #### Running The Tests
 
 Install all the requirements:
