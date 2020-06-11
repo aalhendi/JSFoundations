@@ -48,4 +48,4 @@ function squareOrDouble(n) {
   // Your code here
 }
 
-export { greet, isOdd, oddsSmallerThan, squareOrDouble };
+module.exports = { greet, isOdd, oddsSmallerThan, squareOrDouble };
