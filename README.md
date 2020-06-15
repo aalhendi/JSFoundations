@@ -1,14 +1,16 @@
 # Git Task Steps
 
-1. Fork [this repository](https://github.com/JoinCODED/pre-course-git).
-2. Clone it in your `Development`.
-3. Create a new file using the `touch` command.
-4. Add all the files to the repository: `git add .`
-5. Commit all the files: `git commit -m "your message here"`
-6. Push to the remote repository: `git push`
-7. See changes on GitHub.
+1. The following is a link that takes you to one of our testing repositories: https://github.com/JoinCODED/pre-course-git
+2. Fork that repository.
+3. Clone it in your `Development`: `git clone https://github.com/YOUR_GITHUB_USERNAME/pre-course-git`
+4. Use the command `cd` to move into the repository folder: `cd pre-course-git`
+5. Use the command `touch` to create an example file: `touch example.js`
+6. Add all the files to the repository: `git add .`
+7. Commit all the files: `git commit -m "solved git task!"`
+8. Push to the remote repository: `git push`
+9. Open the repository page on GitHub, you should now see two files: `example.txt` and `example.js`
 
-Once finished, please share a link to your repository with the instructor.
+That's it! Well done!! Please share a link to your repository with the instructor.
 
 ---
 
