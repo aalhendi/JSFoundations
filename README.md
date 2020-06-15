@@ -15,8 +15,18 @@
 
 ## Install [node](https://nodejs.org/en/download/)
 
-- For Mac users, install node using the [macOS installer](https://nodejs.org/dist/v12.16.3/node-v12.16.3.pkg).
-- For Windows users, install by downloading the [Windows installer](https://nodejs.org/dist/v12.16.3/node-v12.16.3-x64.msi).
+For Windows users, install by downloading the [Windows installer](https://nodejs.org/dist/v12.16.3/node-v12.16.3-x64.msi).
+
+For Mac users:
+
+1. Install [Homebrew](https://brew.sh/):
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+   ```
+2. Install [Node]() using Homebrew:
+   ```bash
+   brew install node
+   ```
 
 # Task
 
@@ -24,9 +34,9 @@ In this task, you'll write a script that has variables and uses `console.log` to
 
 ## Steps
 
-2. Open this folder in Visual Studio Code.
-3. In `story.js`, define three variables that contain a `name`, an `age`, and a `hobby`.
-4. Using these variables, print the following story:
+1. Open this folder in Visual Studio Code.
+2. In `story.js`, define three variables that contain a `name`, an `age`, and a `hobby`.
+3. Using these variables, print the following story:
 
    ```
    Mr./Mrs. NAME, in 33 years, you will be AGE_PLUS_33 years old. By then you'll have decades of HOBBY practice!
@@ -52,7 +62,8 @@ To submit your work, simply push your code to GitHub.
 
 After finishing the task and verifying your work, follow these steps to push your code to GitHub:
 
-1. Navigate to project root (where `story.js` is).
-2. Run the command `git add .`
-3. Run `git commit -m "your message here"`.
-4. Push to GitHub: `git push`.
+1. Open a new terminal in VS Code.
+2. To make sure you're in the right folder, run the command `ls`, you should see the file `story.js`.
+3. Run the command `git add .`
+4. Run `git commit -m "your message here"`.
+5. Push to GitHub: `git push`.
