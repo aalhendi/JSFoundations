@@ -13,7 +13,7 @@
 **Fork** this repository and clone your fork (make sure you clone it into your `development` directory):
 
 ```bash
-$ git clone https://github.com/<your_username>/JSFoundations-Functions.git
+$ git clone https://github.com/<YOUR_GITHUB_USERNAME>/JSFoundations-Functions.git
 ```
 
 #### Running Your Code
