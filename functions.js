@@ -14,6 +14,10 @@ function greet(name) {
  * isOdd(n):
  * - receives a number n
  * - returns true if it's odd, false otherwise
+ *
+ * e.g.
+ * isOdd(7) -> true
+ * isOdd(10) -> false
  */
 function isOdd(n) {
   // Your code here
@@ -27,8 +31,6 @@ function isOdd(n) {
  * e.g.
  * oddsSmallerThan(7) -> 3
  * oddsSmallerThan(15) -> 7
- *
- * Hint: you can solve this without writing any loops!
  */
 function oddsSmallerThan(n) {
   // Your code here
