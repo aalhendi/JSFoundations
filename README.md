@@ -7,7 +7,7 @@
 **Fork** this repository and clone your fork (make sure you clone it into your `development` directory):
 
 ```bash
-$ git clone https://github.com/<your_username>/PreCourse-Assessment.git
+$ git clone https://github.com/<your_username>/PreCourse-Project.git
 ```
 
 #### Running The Tests
