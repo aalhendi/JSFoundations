@@ -4,7 +4,7 @@
  *
  * If you'd like to run your function to test it yourself,
  * uncomment it from the bottom of this file, then run this
- * file with `node assessment.js`.
+ * file with `node project.js`.
  *
  * Good luck!
  */
@@ -130,7 +130,6 @@ function isUpperCase(string) {
  * elementInArray([5, 6, 7], 6) -> true
  * elementInArray([5, 6, 7], 8) -> false
  *
- * Hint: Use string method .toUpperCase()
  */
 function elementInArray(numbers, x) {
   // Your code here
