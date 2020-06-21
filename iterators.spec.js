@@ -25,7 +25,7 @@ describe("logger()", () => {
 });
 
 describe("toCelsius()", () => {
-  test("should convert temperatures from C to F", () => {
+  test("should convert temperatures from F to C", () => {
     let c = [0, 100, -40, 50, 12.5];
     let f = [32, 212, -40, 122, 54.5];
     let results = toCelsius(f);
