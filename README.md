@@ -2,14 +2,16 @@
 
 In this task, you'll create a calculator that has two numbers and an operation, and the calculator will perform the operation on those two numbers.
 
-Example, the two numbers could be `3` and `5`, and the operation could be `+`, then the calculator will add `3` and `5`, and print to the user `3 + 5 = 8`.
+You'll create an **integer** variable that contains the _first number_, another **integer** variable that contains the _second number_, and a third **string** variable that contains the _operation_.
 
-2. Open this folder in Visual Studio Code.
-3. In `calculator.js`, create a variable for the first number.
-4. Create a second variable for the second number.
-5. Create a third variable for the operation (addition `+`, subtraction `-`, multiplication `*`, or division `/`).
-6. Use if-statements to check which operation the variable has.
-7. Perform the mathematical operation to the two numbers, and print the result to the user.
+Example, the two numbers could be `3` and `5`, and the operation could be `"+"`, then the calculator will add `3` and `5`, and print to the console `3 + 5 = 8`.
+
+1. Open this folder in Visual Studio Code.
+2. In `calculator.js`, create an **integer** variable for the _first number_.
+3. Create a second **integer** variable for the _second number_.
+4. Create a third **string** variable for the _operation_ (addition `"+"`, subtraction `"-"`, multiplication `"*"`, or division `"/"`).
+5. Use `if-statements` to check which operation the third variable has.
+6. Perform the mathematical operation on the two numbers, and print the result to the console.
 
 # Submission
 
