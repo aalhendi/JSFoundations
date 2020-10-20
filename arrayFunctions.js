@@ -1,14 +1,28 @@
 /**
- * oddOrEven(a):
+ * isArrayLengthOdd(a):
  * - receives array `a`
- * - returns "odd" if array has odd number of elements
- * - returns "even" if array has even number of elements
+ * - returns true if array has an odd number of elements
+ * - returns false otherwise
  *
  * e.g.
- * oddOrEven([1, 2, 3]) -> "odd"
- * oddOrEven([1, 2, 3, 4]) -> "even"
+ * isArrayLengthOdd([1, 2, 3]) -> true
+ * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
-function oddOrEven(a) {
+function isArrayLengthOdd(a) {
+  // Your code here
+}
+
+/**
+ * isArrayLengthEven(a):
+ * - receives array `a`
+ * - returns true if array has an even number of elements
+ * - returns false otherwise
+ *
+ * e.g.
+ * isArrayLengthEven([1, 2, 3]) -> false
+ * isArrayLengthEven([1, 2, 3, 4]) -> true
+ */
+function isArrayLengthEven(a) {
   // Your code here
 }
 
@@ -69,7 +83,8 @@ function youGottaCalmDown(s) {
 }
 
 module.exports = {
-  oddOrEven,
+  isArrayLengthOdd,
+  isArrayLengthEven,
   addLailaToArray,
   eliminateTeam,
   secondHalfOfArrayIfItIsEven,

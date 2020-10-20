@@ -7,19 +7,29 @@
  ***************************/
 
 import {
-  oddOrEven,
+  isArrayLengthOdd,
+  isArrayLengthEven,
   addLailaToArray,
   eliminateTeam,
   secondHalfOfArrayIfItIsEven,
   youGottaCalmDown,
 } from "./arrayFunctions";
 
-describe("oddOrEven(numbers)", () => {
-  test("returns 'odd' if numbers has an odd number of elements", () => {
-    expect(oddOrEven([1, 2, 3])).toEqual("odd");
+describe("isArrayLengthOdd(numbers)", () => {
+  test("returns true if numbers has an odd number of elements", () => {
+    expect(isArrayLengthOdd([1, 2, 3])).toEqual(true);
   });
-  test("returns 'even' if numbers has an even number of elements", () => {
-    expect(oddOrEven([1, 2, 3, 4])).toEqual("even");
+  test("returns true if numbers has an odd number of elements", () => {
+    expect(isArrayLengthOdd([1, 2, 3, 4])).toEqual(false);
+  });
+});
+
+describe("isArrayLengthEven(numbers)", () => {
+  test("returns true if numbers has an odd number of elements", () => {
+    expect(isArrayLengthEven([1, 2, 3])).toEqual(false);
+  });
+  test("returns true if numbers has an odd number of elements", () => {
+    expect(isArrayLengthEven([1, 2, 3, 4])).toEqual(true);
   });
 });
 
