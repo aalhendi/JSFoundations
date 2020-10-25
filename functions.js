@@ -72,40 +72,6 @@ function searchChannels(query, channels) {
   // Your code here
 }
 
-/**************************************************************
- * totalVideosDuration(channel):
- * - receives a channel object
- * - returns the total duration of all the videos in this channel
- *
- * BONUS: use iteration method `.reduce()`
- ****************************************************************/
-function totalVideosDuration(channel) {
-  // Your code here
-}
-
-/**************************************************************
- * channelWithMostContent(channels):
- * - receives an array of channel objects
- * - returns the channel with the highest total video duration
- *
- * Hint: use the `totalVideosDuration()` function
- * BONUS: use iteration method `.sort()`
- ****************************************************************/
-function channelWithMostContent(channels) {
-  // Your code here
-}
-
-/**************************************************************
- * longestChannelName(channels):
- * - receives an array of channel objects
- * - returns the channel with the longest name
- *
- * BONUS: use iteration method `.sort()`
- ****************************************************************/
-function longestChannelName(channels) {
-  // Your code here
-}
-
 module.exports = {
   getChannelName,
   numberOfVideos,
@@ -113,7 +79,4 @@ module.exports = {
   getChannelByName,
   getChannelByVideoTitle,
   searchChannels,
-  totalVideosDuration,
-  channelWithMostContent,
-  longestChannelName,
 };

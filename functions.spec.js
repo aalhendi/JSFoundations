@@ -13,9 +13,6 @@ import {
   getChannelByName,
   getChannelByVideoTitle,
   searchChannels,
-  totalVideosDuration,
-  channelWithMostContent,
-  longestChannelName,
 } from "./functions";
 
 // Data
@@ -97,33 +94,5 @@ describe("searchChannels(query, channels)", () => {
     const query = "lerkgjerlgnerljgne";
     const result = searchChannels(query, channels);
     expect(result).toEqual([]);
-  });
-});
-
-describe("totalVideosDuration(channel)", () => {
-  test("returns the correct array of channel objects.", () => {
-    const channel = channels[0];
-    const totalDuration = channel.videos.reduce(
-      (totalDuration, video) => totalDuration + video.duration,
-      0
-    );
-    const result = totalVideosDuration(channel);
-    expect(result).toBe(totalDuration);
-  });
-});
-
-describe("channelWithMostContent(channels)", () => {
-  test("returns the correct channel object.", () => {
-    const correctChannel = channels[0];
-    const result = channelWithMostContent(channels);
-    expect(result).toEqual(correctChannel);
-  });
-});
-
-describe("longestChannelName(channels)", () => {
-  test("returns the correct channel object.", () => {
-    const correctChannel = channels[3];
-    const result = longestChannelName(channels);
-    expect(result).toEqual(correctChannel);
   });
 });
