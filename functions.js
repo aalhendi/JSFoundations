@@ -4,7 +4,7 @@
  * - logs "Hello <name>"
  *
  * e.g.
- * greet("Michael") logs "Hello Michael"
+ * greet("Hamza") logs "Hello Hamza"
  */
 function greet(name) {
   // Your code here
