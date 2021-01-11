@@ -1,6 +1,6 @@
 /**
- * isArrayLengthOdd(a):
- * - receives array `a`
+ * isArrayLengthOdd(numbers):
+ * - receives array `numbers`
  * - returns true if array has an odd number of elements
  * - returns false otherwise
  *
@@ -8,13 +8,13 @@
  * isArrayLengthOdd([1, 2, 3]) -> true
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
-function isArrayLengthOdd(a) {
+function isArrayLengthOdd(numbers) {
   // Your code here
 }
 
 /**
- * isArrayLengthEven(a):
- * - receives array `a`
+ * isArrayLengthEven(numbers):
+ * - receives array `numbers`
  * - returns true if array has an even number of elements
  * - returns false otherwise
  *
@@ -22,37 +22,37 @@ function isArrayLengthOdd(a) {
  * isArrayLengthEven([1, 2, 3]) -> false
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
-function isArrayLengthEven(a) {
+function isArrayLengthEven(numbers) {
   // Your code here
 }
 
 /**
- * addLailaToArray(a):
- * - receives array `a`
- * - returns a new array that's a copy of array `a` with additional string "Laila"
+ * addLailaToArray(instructors):
+ * - receives array `instructors`
+ * - returns a new array that's a copy of array `instructors` with additional string "Laila"
  *
  * e.g.
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
-function addLailaToArray(a) {
+function addLailaToArray(instructors) {
   // Your code here
 }
 
 /**
- * eliminateTeam(a):
- * - receives array `a`
+ * eliminateTeam(teams):
+ * - receives array `teams`
  * - removes the last element from the array and return it
  *
  * e.g.
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
-function eliminateTeam(a) {
+function eliminateTeam(teams) {
   // Your code here
 }
 
 /**
- * secondHalfOfArrayIfItIsEven(a):
- * - receives array `a`
+ * secondHalfOfArrayIfItIsEven(fruits):
+ * - receives array `fruits`
  * - returns a new array that's the second half of the original array if it has an even number of elements
  * - returns an empty array if it has an odd number of elements
  *
@@ -60,14 +60,14 @@ function eliminateTeam(a) {
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]) -> ["banana", "kiwi"]
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
  */
-function secondHalfOfArrayIfItIsEven(a) {
+function secondHalfOfArrayIfItIsEven(fruits) {
   // Your code here
 }
 
 /**
- * youGottaCalmDown(s):
- * - receives a string `s`
- * - returns the string `s` with at most one exclamation mark (!) at the end.
+ * youGottaCalmDown(shout):
+ * - receives a string `shout`
+ * - returns the string `shout` with at most one exclamation mark (!) at the end.
  *
  * e.g.
  * youGottaCalmDown("HI!!!!!!!!!!") -> "HI!"
@@ -78,7 +78,7 @@ function secondHalfOfArrayIfItIsEven(a) {
  * - Use string method .slice()
  * - Use string method .endsWith()
  */
-function youGottaCalmDown(s) {
+function youGottaCalmDown(shout) {
   // Your code here
 }
 
