@@ -12,4 +12,4 @@ jobs:
           yarn test-ci --json --outputFile=test.json
       - name: send tests
         if: always()
-        run: curl --form "test=@test.json" --form username=${{ github.actor }} --form repo=${{ github.repository}} https://warehouse.joincoded.com/github/task/pushed/react/
+        run: curl --form "test=@test.json" --form username=${{ github.actor }} --form repo=${{ github.repository}} https://warehouse-api.joincoded.com/github/task/pushed/react/
