@@ -17,6 +17,8 @@ function generateIntegersArray(firstNumber, lastNumber) {
   return IntegersArray;
 }
 
+// console.log(generateIntegersArray(3, 7));
+
 /**
  * noZeroes(numberString):
  * - receives a number as a string
@@ -39,8 +41,8 @@ function noZeroes(numberString) {
   numberString;
 }
 
-// console.log(generateIntegersArray(3, 7));
 // console.log(noZeroes("001100"));
+
 module.exports = {
   generateIntegersArray,
   noZeroes,

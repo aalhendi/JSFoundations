@@ -22,6 +22,8 @@ function sumOdds(numbers) {
   // Your code here
 }
 
+// console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
+
 /**
  * characterCount(string, c):
  * - receives a string and a character
@@ -37,6 +39,8 @@ function sumOdds(numbers) {
 function characterCount(string, c) {
   // Your code here
 }
+
+// console.log(characterCount("Character Count is clever", "c"));
 
 /**
  * differences(numbers):
@@ -56,6 +60,8 @@ function characterCount(string, c) {
 function differences(numbers) {
   // Your code here
 }
+
+// console.log(differences([11, 35, 52, 14, 56]));
 
 /**
  * largestIncrement(numbers):
@@ -77,6 +83,8 @@ function largestIncrement(numbers) {
   // Your code here
 }
 
+// console.log(largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]));
+
 /**
  * afterX(numbers, x):
  * - receives an array of numbers, and a number `x`.
@@ -91,6 +99,8 @@ function largestIncrement(numbers) {
 function afterX(numbers, x) {
   // Your code here
 }
+
+// console.log(afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
 
 /**
  * abbreviate(firstName, lastName):
@@ -107,6 +117,8 @@ function abbreviate(firstName, lastName) {
   // Your code here
 }
 
+// console.log(abbreviate("miss", "Stephane"));
+
 /**
  * isUpperCase(string):
  * - receives a string
@@ -120,6 +132,8 @@ function abbreviate(firstName, lastName) {
 function isUpperCase(string) {
   // Your code here
 }
+
+// console.log(isUpperCase("JCREW"));
 
 /**
  * elementInArray(numbers, x):
@@ -135,6 +149,8 @@ function elementInArray(numbers, x) {
   // Your code here
 }
 
+// console.log(elementInArray([5, 6, 7], 8));
+
 /**
  * reverseString(string):
  * - receives a string
@@ -149,14 +165,6 @@ function reverseString(string) {
   // Your code here
 }
 
-// console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
-// console.log(characterCount("Character Count is clever", "c"));
-// console.log(differences([11, 35, 52, 14, 56]));
-// console.log(largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]));
-// console.log(afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
-// console.log(abbreviate("miss", "Stephane"));
-// console.log(isUpperCase("JCREW"));
-// console.log(elementInArray([5, 6, 7], 8));
 // console.log(reverseString("CODED"));
 
 module.exports = {
