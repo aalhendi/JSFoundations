@@ -7,16 +7,16 @@
  ***************************/
 
 import {
-  sumOdds,
+  abbreviate,
+  afterX,
   characterCount,
   differences,
-  largestIncrement,
-  afterX,
-  abbreviate,
-  isUpperCase,
   elementInArray,
+  isUpperCase,
+  largestIncrement,
   reverseString,
-} from "../project";
+  sumOdds,
+} from "../functions";
 
 describe("sumOdds(numbers)", () => {
   test("returns the sum of only the ODD numbers.", () => {

@@ -1,4 +1,4 @@
-import { generateIntegersArray, noZeroes } from "../debug-project";
+import { generateIntegersArray, noZeroes } from "../debug";
 
 describe("generateIntegersArray(firstNumber, lastNumber)", () => {
   test("returns an array of numbers between the two numbers passed as parameters.", () => {
