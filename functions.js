@@ -67,7 +67,7 @@ function getChannelByName(channelName, channels) {
 function getChannelByVideoTitle(videoTitle, channels) {
   // Your code here
 }
-// console.log(channelHasVideo("The Universal S", channels));
+// console.log(getChannelByVideoTitle("The Universal S", channels));
 
 /**************************************************************
  * searchChannels(query, channels):
