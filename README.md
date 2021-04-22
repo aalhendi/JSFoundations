@@ -17,17 +17,19 @@ This is an example of what your terminal should look like:
 
     5 * 7 = 35
     ```
+    
+## Setup
+
+In your terminal, make sure you're inside the task directory and run `yarn install`.
 
 ## Steps:
-
-1. In your terminal, make sure you're inside the task directory and run `yarn install`.
+ 
 2. In `calculator.js`, ask the user for two numbers and operation using the `prompt` method we provided.
 3. Validate user input.
    - If the user's inputs were not numbers, print to the user that the numbers were invalid. For example if the user enters letters instead of numbers.
    - Hint: Prompt will give you the value as a string, hmmm what should we do?
    - If the operation the user entered was not any of the options (`+`, `-`, `*`, or `/`), print to the user that the operation is not valid.
 4. If the user entered valid numbers and a valid operation, perform the calculation and print it to the user.
-5. Add and commit `calculator.py`, then push to Github.
 
 # Submission
 
