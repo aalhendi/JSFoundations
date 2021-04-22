@@ -6,15 +6,28 @@ You'll create an **integer** variable that contains the _first number_, another 
 
 Example, the two numbers could be `3` and `5`, and the operation could be `"+"`, then the calculator will add `3` and `5`, and print to the console `3 + 5 = 8`.
 
-## Task Steps
+This is an example of what your terminal should look like:
 
-1. Fork and clone [this repository](https://github.com/JoinCODED/JSFoundations-Conditionals)
-2. Open the repo folder in Visual Studio Code.
-3. In `calculator.js`, create an **integer** variable for the _first number_.
-4. Create a second **integer** variable for the _second number_.
-5. Create a third **string** variable for the _operation_ (addition `"+"`, subtraction `"-"`, multiplication `"*"`, or division `"/"`).
-6. Use `if-statements` to check which operation the third variable has.
-7. Perform the mathematical operation on the two numbers, and print the result to the console.
+    ```
+    Please enter the first number: 5
+    Please enter the second number: 7
+    Please choose the operation (+, -, /, *): *
+
+    ---------------
+
+    5 * 7 = 35
+    ```
+
+## Steps:
+
+1. In your terminal, make sure you're inside the task directory and run `yarn install`.
+2. In `calculator.js`, ask the user for two numbers and operation using the `prompt` method we provided.
+3. Validate user input.
+   - If the user's inputs were not numbers, print to the user that the numbers were invalid. For example if the user enters letters instead of numbers.
+   - Hint: Prompt will give you the value as a string, hmmm what should we do?
+   - If the operation the user entered was not any of the options (`+`, `-`, `*`, or `/`), print to the user that the operation is not valid.
+4. If the user entered valid numbers and a valid operation, perform the calculation and print it to the user.
+5. Add and commit `calculator.py`, then push to Github.
 
 # Submission
 
