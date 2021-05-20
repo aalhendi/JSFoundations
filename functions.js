@@ -6,6 +6,7 @@
  */
 
 const channels = require("./channels.json");
+// console.log(channels[0]);
 
 /**************************************************************
  * getChannelName(channel)
