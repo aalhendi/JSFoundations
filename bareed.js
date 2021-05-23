@@ -54,7 +54,7 @@ class Wallet {
  * Person: defines a person with a name (and feelings)
  *
  * name: name of said person
- * location: a Point
+ * location: a Point instance
  * wallet: a Wallet instance initially with 0.
  *
  * moveTo(point): updates the `location` to `point`
