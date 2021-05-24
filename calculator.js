@@ -10,7 +10,7 @@ if (isNaN(num1)) {
     return;
 }
 
-let num2 = parseFloat(prompt("Please enter the seond number: "));
+let num2 = parseFloat(prompt("Please enter the second number: "));
 
 if (isNaN(num2)) {
     console.log(`Not a valid number!`);
@@ -26,7 +26,7 @@ if (opr == "+") {
 }else if (opr == '/') {
     console.log(`${num1} ${opr} ${num2} = ${num1 / num2}`);
 }else if (opr == '*') {
-    console.log(`${num1} ${opr} ${num2} = ${num1 / num2}`);
+    console.log(`${num1} ${opr} ${num2} = ${num1 * num2}`);
 }else {
     console.log("Not a valid operation!")
 }
