@@ -31,8 +31,6 @@ function generateIntegersArray(firstNumber, lastNumber) {
  *
  */
 function noZeroes(numberString) {
-    console.log(numberString);
-
     while (numberString.startsWith("0")) {
         numberString = numberString.slice(1);
     }
