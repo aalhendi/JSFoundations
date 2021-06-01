@@ -101,7 +101,7 @@ class Vendor extends Person {
         this.price = price;
     }
 
-    sellTo = function (customer, numberOfIceCreams) {
+    sellTo = (customer, numberOfIceCreams) => {
         this.location = customer.location;
         customer.wallet.debit(numberOfIceCreams * this.price);
         this.wallet.credit(numberOfIceCreams * this.price);
@@ -137,9 +137,14 @@ class Customer extends Person {
     _haveEnoughMoney = (vendor, numberOfIceCreams) =>
         this.wallet.money >= vendor.price * numberOfIceCreams;
 
-    requestIceCream = (vendor, numberOfIceCreams) =>
-        this._isInRange(vendor, numberOfIceCreams) &
-        this._haveEnoughMoney(vendor, numberOfIceCreams);
+    requestIceCream = (vendor, numberOfIceCreams) => {
+        if (
+            this._isInRange(vendor, numberOfIceCreams) &&
+            this._haveEnoughMoney(vendor, numberOfIceCreams)
+        ) {
+            vendor.sellTo(this, numberOfIceCreams);
+        }
+    };
 }
 
 export { Point, Wallet, Person, Customer, Vendor };
