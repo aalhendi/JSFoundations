@@ -102,7 +102,7 @@ class Vendor extends Person {
     }
 
     sellTo = (customer, numberOfIceCreams) => {
-        this.location = customer.location;
+        this.moveTo(customer.location);
         customer.wallet.debit(numberOfIceCreams * this.price);
         this.wallet.credit(numberOfIceCreams * this.price);
     };
