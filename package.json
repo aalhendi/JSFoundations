@@ -1,0 +1,11 @@
+{
+  "name": "JSFoundations-Conditionals",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/JoinCODED/JSFoundations-Conditionals.git",
+  "author": "Lailz <lailaabdulraheem@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
