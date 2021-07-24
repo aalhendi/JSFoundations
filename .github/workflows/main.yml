@@ -1,0 +1,15 @@
+on: push
+name: Main
+jobs:
+  lint-and-test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: test
+        run: |
+          yarn install
+          yarn test-ci --json --outputFile=test.json
+      - name: send tests
+        if: always()
+        run: curl --form "test=@test.json" --form username=${{ github.actor }} --form repo=${{ github.repository}} https://warehouse-api.joincoded.com/github/task/pushed/react/
